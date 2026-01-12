@@ -1,9 +1,8 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-// Social Icons as components
 const InstagramIcon = () => (
   <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
 )
@@ -17,6 +16,8 @@ const LinkedInIcon = () => (
 )
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.getElementById('navbar')
@@ -24,13 +25,13 @@ export default function Home() {
         navbar.classList.toggle('scrolled', window.scrollY > 50)
       }
     }
-
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault()
+    setMobileMenuOpen(false)
     const element = document.querySelector(id)
     if (element) {
       const offset = 80
@@ -46,7 +47,7 @@ export default function Home() {
           <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="logo-wrap">
             <Image src="/logo.jpg" alt="Everston Home" width={50} height={50} className="logo-img" />
           </a>
-          <div className="nav-links">
+          <div className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#services" onClick={(e) => scrollToSection(e, '#services')}>Services</a>
             <a href="#about" onClick={(e) => scrollToSection(e, '#about')}>About</a>
             <a href="#projects" onClick={(e) => scrollToSection(e, '#projects')}>Work</a>
@@ -54,7 +55,7 @@ export default function Home() {
             <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')}>Contact</a>
             <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="btn">Free Estimate</a>
           </div>
-          <button className="mobile-menu" aria-label="Menu">
+          <button className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`} aria-label="Menu" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -117,7 +118,7 @@ export default function Home() {
               <div className="about-text">
                 <p><strong>Nate LaCroix</strong> brings over a decade of construction experience to every project. From his start as a residential wireman to managing large-scale developments at Century Communities, he&apos;s built a reputation for reliability, quality, and getting things done right.</p>
                 <p>With drafting and design training from Montana State University, a Colorado Residential Wireman certification, and hands-on experience in every phase of construction, Nate founded Everston Home to deliver personal, quality-focused service.</p>
-                <p><span className="hl">What sets us apart?</span> In-house interior design expertise that can transform any space into a home you&apos;ll love—included with every project.</p>
+                <p><span className="hl">What sets us apart?</span> We treat every project like it&apos;s our own home—with honest communication, quality craftsmanship, and attention to detail from start to finish.</p>
               </div>
               <div className="creds">
                 <div className="cred"><div className="icon">⚡</div><div><h4>Licensed Wireman</h4><p>Colorado Certified since 2017</p></div></div>
