@@ -96,7 +96,7 @@ export default function Home() {
           <div className="sec-h">
             <span className="sec-tag">What We Do</span>
             <h2 className="sec-title">Complete <span className="red">Home Services</span></h2>
-            <p className="sec-desc">From start to finish, we manage every aspect of your project with expert precision—including in-house interior design to transform any space.</p>
+            <p className="sec-desc">With us, you get 3-in-1: a general contractor, licensed electrician, and in-house interior designer—all working together on your project.</p>
           </div>
           <div className="srv-grid">
             <div className="srv-card"><div className="icon">🏗️</div><h3>Full Remodels</h3><p>Complete home transformations from demo to completion. Kitchens, bathrooms, basements, and whole-house renovations.</p></div>
@@ -114,17 +114,17 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-content">
               <span className="sec-tag">About Everston Home</span>
-              <h2 className="sec-title">Built on <span className="red">Quality</span> & Trust</h2>
+              <h2 className="sec-title">Family-Owned. <span className="red">3-in-1</span> Service.</h2>
               <div className="about-text">
-                <p><strong>Nate LaCroix</strong> brings over a decade of construction experience to every project. From his start as a residential wireman to managing large-scale developments at Century Communities, he&apos;s built a reputation for reliability, quality, and getting things done right.</p>
-                <p>With drafting and design training from Montana State University, a Colorado Residential Wireman certification, and hands-on experience in every phase of construction, Nate founded Everston Home to deliver personal, quality-focused service.</p>
-                <p><span className="hl">What sets us apart?</span> We treat every project like it&apos;s our own home—with honest communication, quality craftsmanship, and attention to detail from start to finish.</p>
+                <p><strong>Everston Home is a family-owned business</strong> built on the belief that quality work and honest service go hand in hand. When you work with us, you get three experts in one: a general contractor, a licensed electrician, and an in-house interior designer.</p>
+                <p><strong>Nate LaCroix</strong> brings over a decade of construction experience—from residential electrical work to managing large-scale developments at Century Communities. With drafting training from Montana State and a Colorado Residential Wireman certification, he handles everything from structure to mechanicals.</p>
+                <p><span className="hl">What sets us apart?</span> Our in-house designer holds a Bachelor&apos;s degree in Interior Design and brings professional expertise to every project—ensuring your space isn&apos;t just built right, but looks incredible too.</p>
               </div>
               <div className="creds">
-                <div className="cred"><div className="icon">⚡</div><div><h4>Licensed Wireman</h4><p>Colorado Certified since 2017</p></div></div>
-                <div className="cred"><div className="icon">📐</div><div><h4>Design Background</h4><p>Drafting & Design from MSU</p></div></div>
-                <div className="cred"><div className="icon">🏗️</div><div><h4>Construction Manager</h4><p>Century Communities experience</p></div></div>
-                <div className="cred"><div className="icon">🎨</div><div><h4>In-House Design</h4><p>Transform any space</p></div></div>
+                <div className="cred"><div className="icon">⚡</div><div><h4>Licensed Electrician</h4><p>Colorado Certified since 2017</p></div></div>
+                <div className="cred"><div className="icon">🏗️</div><div><h4>General Contractor</h4><p>10+ years experience</p></div></div>
+                <div className="cred"><div className="icon">🎨</div><div><h4>In-House Designer</h4><p>Bachelor&apos;s Degree, Interior Design</p></div></div>
+                <div className="cred"><div className="icon">👨‍👩‍👧</div><div><h4>Family Owned</h4><p>Personal service guaranteed</p></div></div>
               </div>
             </div>
             <div className="about-vis">
@@ -135,7 +135,7 @@ export default function Home() {
               </div>
               <div className="about-badges">
                 <div className="about-badge"><span>🔧</span><p>NO JOB TOO BIG<br/>OR TOO SMALL</p></div>
-                <div className="about-badge"><span>⭐</span><p>CLIENT REFERRALS<br/>& 5-STAR REVIEWS</p></div>
+                <div className="about-badge"><span>⭐</span><p>3-IN-1 SERVICE<br/>GC + ELECTRIC + DESIGN</p></div>
               </div>
             </div>
           </div>
@@ -253,7 +253,7 @@ export default function Home() {
               <Image src="/logo.jpg" alt="Everston Home" width={60} height={60} />
               <span className="foot-brand-text">Everston Home</span>
             </div>
-            <p className="foot-desc">All phases of construction and remodeling—structure, mechanicals, and finishes. Serving Littleton, Denver, and the entire Front Range with quality craftsmanship.</p>
+            <p className="foot-desc">Family-owned construction and remodeling. 3-in-1 service: general contractor, licensed electrician, and in-house interior designer. Serving Littleton, Denver, and the Front Range.</p>
             <div className="foot-contact-item"><span>📞</span> (303) 242-4524</div>
             <div className="foot-contact-item"><span>✉️</span> everstonhome@gmail.com</div>
             <div className="foot-contact-item"><span>📍</span> Littleton, Colorado</div>
@@ -277,8 +277,8 @@ export default function Home() {
           <div>
             <h4 className="foot-h">Company</h4>
             <div className="foot-links">
-              <a href="#about" onClick={(e) => scrollToSection(e, '#about')}>About Nate</a>
-              <a href="#about" onClick={(e) => scrollToSection(e, '#about')}>Our Story</a>
+              <a href="#about" onClick={(e) => scrollToSection(e, '#about')}>About Us</a>
+              <a href="#about" onClick={(e) => scrollToSection(e, '#about')}>Our Team</a>
               <a href="#projects" onClick={(e) => scrollToSection(e, '#projects')}>Recent Projects</a>
               <a href="#reviews" onClick={(e) => scrollToSection(e, '#reviews')}>Client Reviews</a>
               <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')}>Contact Us</a>
@@ -302,8 +302,8 @@ export default function Home() {
             <p>© 2026 Everston Home. All rights reserved.</p>
             <div className="foot-badges">
               <div className="foot-badge"><span>✓</span> Licensed & Insured</div>
-              <div className="foot-badge"><span>✓</span> Residential Wireman Certified</div>
-              <div className="foot-badge"><span>✓</span> Colorado State Licensed</div>
+              <div className="foot-badge"><span>✓</span> Family Owned</div>
+              <div className="foot-badge"><span>✓</span> 3-in-1 Service</div>
             </div>
           </div>
         </div>
